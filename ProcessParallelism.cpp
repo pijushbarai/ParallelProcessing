@@ -45,7 +45,6 @@ void makeRWset2(string s){
 int main(){
     freopen("input.txt","r",stdin);
     for(int  i = 0;i < 5;i++){
-        // cin>> process[i];
         getline(cin,process[i]);
     }
     bool c1,c2,c3;
@@ -67,6 +66,7 @@ int main(){
                 for(int j = 0; j < W2.size();j++){
                     if(R1[i] == W2[j]){
                         c1= true;
+                        // anti dependency
                     }
                 }
             }
@@ -74,6 +74,7 @@ int main(){
                 for(int j = 0;j < R2.size();j++){
                     if(W1[i] == R2[j]){
                         c2 = true;
+                        // follow dependency
                     }
                 }
             }
@@ -82,6 +83,7 @@ int main(){
                 for(int j = 0;j < W2.size();j++){
                     if(W1[i] == W2[j]){
                         c3 = true;
+                        //output dependency
                     }
                 }
             }
